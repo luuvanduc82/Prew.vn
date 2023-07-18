@@ -144,6 +144,9 @@
     opacity: 0;
     visibility: hidden;
     transition: all 1s;
+    @include max(560px) {
+        right: 1.5rem;
+    }
     &.active {
         transform: translateX(0rem);
         opacity: 1;

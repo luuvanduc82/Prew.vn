@@ -341,8 +341,13 @@
                 align-items: center;
                 img {
                     margin-left: -2.5rem;
+                    transition: all .4s;
                     &:first-of-type {
                         margin-left: 0;
+                    }
+                    &:hover {
+                        z-index: 1;
+                        transform: scale(1.05);
                     }
                 }
                 span {
@@ -464,7 +469,7 @@
             }
             p {
                 font-size: 1.6rem;
-                font-weight: 400;
+                font-weight: 300;
             }
             &::after {
                 content: "";
@@ -486,8 +491,13 @@
             align-items: center;
             img {
                 margin-left: -2.5rem;
+                transition: all .4s;
                 &:first-of-type {
                     margin-left: 0;
+                }
+                &:hover {
+                    z-index: 1;
+                    transform: scale(1.1)!important;
                 }
             }
             span {
@@ -836,7 +846,7 @@
                 gap: 1rem;
             }
             li.nav_tab_item {
-                padding: 0 10px;
+                padding: 3px 20px;
                 border-radius: 3rem;
                 transition: all .4s;
                 button {
@@ -939,7 +949,7 @@
                         display: flex;
                         align-items: center;
                         justify-content: center;
-                        column-gap: 10px;
+                        column-gap: 20px;
                         color: white;
                         font-size: 14px;
                         font-weight: 600;
@@ -947,6 +957,20 @@
                             transition: all .3s;
                             &:hover {
                                 color: $color_orange;
+                                border-bottom: 1px dashed white;
+                            }
+                            &.document_overlay_view {
+                                position: relative;
+                                &::after {
+                                    content: "";
+                                    position: absolute;
+                                    right: -1rem;
+                                    width: 1px;
+                                    height: 85%;
+                                    top: 50%;
+                                    background: rgba(255, 255, 255, 0.37);
+                                    transform: translateY(-50%);
+                                }
                             }
                         }
                     }
@@ -984,6 +1008,9 @@
                         }
                         .views {
                             font-size: 1.4rem;
+                            i {
+                                color: black;
+                            }
                         }
                     }
                 }
@@ -1061,7 +1088,7 @@
                 gap: 1rem;
             }
             .nav_tab_item {
-                padding: 0 10px;
+                padding: 3px 20px;
                 border-radius: 3rem;
                 transition: all 0.4s;
                 button {
